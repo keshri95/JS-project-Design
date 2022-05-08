@@ -6,13 +6,10 @@
   box-sizing: border-box;
 }
 
-
 /* <!-- HEADER --> */
 .headerSection {
   position: fixed;
   width: 100%;
-  /* position: fixed; */
-  /* top: 0; */
   background-color: #eaebec;
   z-index: 100;
 }
@@ -21,12 +18,19 @@ ul {
   display: flex;
   align-items: center;
   list-style-type: none;
-  justify-content: space-evenly;
 }
 a {
   text-decoration: none;
   color: black;
 }
+
+li {
+  padding: 0 10px;
+}
+li:first-child {
+  flex: 1;
+}
+
 li a:hover {
   color: rgb(0, 17, 255);
 }
@@ -44,44 +48,39 @@ li a:hover {
   z-index: 200;
 }
 .centerTextButton {
-  position: absolute;
-  /* top: 40%; */
-  left: 35%;
   color: #fff;
   text-align: center;
   font-size: 20px;
-  bottom: 44%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .centerButton {
   padding: 10px;
   color: #fff;
-  position: absolute;
-  bottom: 35%;
-  left: 45%;
   background-color: blueviolet;
   border-radius: 5px;
   border-style: none;
   cursor: pointer;
+  width: 20%;
 }
-.fristText{
+.fristText {
   font-size: 35px;
   color: #fff;
   line-height: 1.5;
 }
-.secondText{
+.secondText {
   font-size: 25;
   color: #fff;
   line-height: 1.5;
 }
-.thrdText{
+.thrdText {
   font-size: 22;
   color: #fff;
   line-height: 1.5;
 }
-
-
-
-
 
 /*      <!-- SECOND CENTER IMAGE -->  */
 
@@ -92,14 +91,13 @@ li a:hover {
   width: 100%;
   padding: 0 30px;
 }
-.text1{
+.text1 {
   font-size: 25px;
   padding: 20px;
 }
-.sec{
+.sec {
   color: green;
   padding: 20px;
-
 }
 .img-section {
   width: 100%;
@@ -124,9 +122,7 @@ li a:hover {
 /* <!-- MEET OUR TEAM --> */
 
 .meetTeam {
-  /* background-image: url("./assets/bat-two.jpg"); */
   width: 100%;
-  /* height: 60vh; */
   background-color: rgb(63, 63, 63);
 }
 
@@ -153,28 +149,25 @@ li a:hover {
   font-size: 20px;
 }
 
-.temamThumb{
-  width:100%;
-  height:200px;
+.temamThumb {
+  width: 100%;
+  height: 200px;
   border-radius: 5px;
-
 }
 
-.meetEmp{
+.meetEmp {
   background-color: #000;
   color: #1865b3;
   text-align: center;
   border-radius: 5px;
+  margin: 0 5px;
 }
 
 .meetTeamImageRows {
-  /* margin: 0 6%; */
   display: flex;
   justify-content: space-evenly;
-  /* position: relative; */
   padding: 20px 0;
 }
-
 
 /*   <!-- OUR SERVCES --> */
 
@@ -230,15 +223,18 @@ i {
 /*       <!-- NEWSLETTER --> */
 
 .newLet {
-  /* height: 60vh; */
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  background-image: url("./assets/travel.jpg");
+  align-items: center;
+  /* justify-content: center; */
+  justify-content: space-evenly;
+  background-image: url(./assets/travel.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 .newLetText {
-  padding: 10% 0;
   text-align: center;
   font-size: 25px;
   line-height: 1.5;
@@ -257,17 +253,12 @@ i {
 .newInputs {
   display: flex;
   gap: 15px;
-  position: absolute;
-  bottom: -300%;
-  right: 37%;
+  padding: 5px;
 }
 
 .newInputsBut {
   padding: 10px;
   color: #fff;
-  /* position: absolute; */
-  /* bottom: 35%;
-  left: 45%; */
   background-color: rgb(75, 230, 114);
   border-radius: 5px;
   border-style: none;
@@ -289,9 +280,9 @@ i {
   line-height: 1.5;
 }
 
-.workImgHead{
+.workImgHead {
   /* border: 1px solid red; */
-  padding: 10px;
+  /* padding: 10px; */
   display: flex;
   /* margin: 0 15%; */
   padding: 1% 14%;
@@ -299,7 +290,7 @@ i {
   flex-wrap: wrap;
 }
 
-.one{
+.one {
   width: 100%;
   height: 150px;
   border-radius: 5px;
@@ -309,6 +300,7 @@ i {
 
 .ourPric {
   background-color: #1865b3;
+  padding: 0 5px;
 }
 
 .pricAnchor {
@@ -373,7 +365,7 @@ i {
 
 /* --------  CONTACT US -------- */
 
-.contactHeader{
+.contactHeader {
   /* border: 1px solid red; */
   /* height: 70vh; */
   background-image: url("./assets/contact.jpg");
@@ -388,7 +380,7 @@ i {
   line-height: 1.5;
   padding: 20px;
 }
-form{
+form {
   width: 100%;
 }
 
@@ -427,4 +419,122 @@ textarea {
   border-radius: 5px;
   color: #706d6d;
   background-color: #78ec5a;
+}
+
+/* Tablet media-query 800px */
+
+@media screen and (max-width: 800px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* NAVIGATION */
+
+  li {
+    padding: 5px;
+  }
+
+  /* SECONDE CENTER IMAGE */
+  .centerCover {
+    padding: 5px;
+  }
+
+  /*  MEET OUR TEAM  */
+  .meetEmp {
+    margin: 5px;
+  }
+  .meetTeamImageRows {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /* NEWSLETTER  */
+  .newLetText {
+    padding: 0 2px;
+  }
+}
+
+/* Mobile view 600px */
+
+@media screen and (max-width: 600px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /*    <!-- HEADER --> */
+
+  li:first-child {
+    flex: 1;
+    float: left;
+  }
+
+  /* CENTER IMAGE */
+  .centerCover{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .divCovers{
+    width: 100%;
+  }
+
+  /*  MEET OUR TEAM  */
+
+  .meetTeam {
+    padding: 0 15px;
+  }
+
+  /* image-in-on-column  */
+  .meetTeamImageRows {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .pricDetails {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile view 320px */
+@media screen and (max-width: 320px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* CENTER IMAGE */
+  .centerButton{
+    width: 40%;
+  }
+
+  /* SECONDE CENTER IMAGE */
+
+  .centerCover{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .divCovers{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .text1,.sec{
+    padding: 10px;
+  }
+
+
+  /* NEWS LETTER */
+  .newInputs{
+    display: flex;
+    flex-direction: column;
+  }
+  .newInputsSetIt{
+    padding: 5px;
+  }
 }

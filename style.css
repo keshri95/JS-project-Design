@@ -27,9 +27,9 @@ a {
 li {
   padding: 0 10px;
 }
-/* li:first-child {
+li:first-child {
   flex: 1;
-} */
+}
 
 li a:hover {
   color: rgb(0, 17, 255);

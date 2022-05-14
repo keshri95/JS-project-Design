@@ -27,9 +27,9 @@ a {
 li {
   padding: 0 10px;
 }
-li:first-child {
+/* li:first-child {
   flex: 1;
-}
+} */
 
 li a:hover {
   color: rgb(0, 17, 255);
@@ -191,7 +191,7 @@ li a:hover {
   padding: 5%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .aboutCou {
   text-align: justify;
@@ -206,11 +206,12 @@ li a:hover {
 }
 .bodySec {
   width: 20vw;
-  height: 30vh;
-  margin: 25px;
+  /* height: 30vh; */
+  margin: 20px;
   border-radius: 5px;
   box-shadow: red;
   border: 1px solid #ccc;
+  padding: 4px;
 }
 i {
   background-color: rgb(72, 230, 98);
@@ -424,15 +425,17 @@ textarea {
 /* Tablet media-query 800px */
 
 @media screen and (max-width: 800px) {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+
   /* NAVIGATION */
 
   li {
     padding: 5px;
+    text-align: center;
+  }
+
+  li:first-child {
+    flex: 1;
+    float: none;
   }
 
   /* SECONDE CENTER IMAGE */
@@ -452,22 +455,42 @@ textarea {
   .newLetText {
     padding: 0 2px;
   }
+
+  /* SERVICES */
+  .bodySec{
+    width: 20vw;
+    /* height: 30vh; */
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: red;
+    border: 1px solid #ccc;
+    padding: 4px;
+  }
 }
 
 /* Mobile view 600px */
 
 @media screen and (max-width: 600px) {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+
 
   /*    <!-- HEADER --> */
 
+  .headerSection {
+    position: static;
+    width: 100%;
+    background-color: #eaebec;
+    z-index: 100;
+  }
+
+  ul {
+    display: block;
+    align-items: center;
+    list-style-type: none;
+  }
+
   li:first-child {
     flex: 1;
-    float: left;
+    float: none;
   }
 
   /* CENTER IMAGE */
@@ -497,15 +520,22 @@ textarea {
     display: flex;
     flex-wrap: wrap;
   }
+
+    /* SERVICES */
+
+  .bodySec{
+    width: 30vw;
+    /* height: 30vh; */
+    /* margin: 25px; */
+    border-radius: 5px;
+    box-shadow: red;
+    border: 1px solid #ccc;
+  }
 }
 
 /* Mobile view 320px */
 @media screen and (max-width: 320px) {
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+
 
   /* CENTER IMAGE */
   .centerButton{
@@ -537,4 +567,15 @@ textarea {
   .newInputsSetIt{
     padding: 5px;
   }
+
+  /* SERVICES */
+
+  .bodySec {
+    width: 68vw;
+    /* height: 30vh; */
+    /* margin: 25px; */
+    border-radius: 5px;
+    box-shadow: red;
+    border: 1px solid #ccc;
+}
 }

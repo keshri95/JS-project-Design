@@ -66,20 +66,18 @@ li a:hover {
   cursor: pointer;
   width: 20%;
 }
+.box{
+  color: rgba(212, 14, 30, 0.842);
+  line-height: 1.5;
+}
 .fristText {
   font-size: 35px;
-  color: #fff;
-  line-height: 1.5;
 }
 .secondText {
-  font-size: 25;
-  color: #fff;
-  line-height: 1.5;
+  font-size: 25px;
 }
 .thrdText {
-  font-size: 22;
-  color: #fff;
-  line-height: 1.5;
+  font-size: 22px;
 }
 
 /*      <!-- SECOND CENTER IMAGE -->  */

@@ -26,9 +26,8 @@ form.addEventListener("submit", (e) => {
 let ValidaeFieleds = (id, elem, message) => {
   if (id.value.trim() === "") {
     erroMsg[elem].innerHTML = message;
-    // console.log("error");
   } else {
-    erroMsg[elem].innerHTML = ""
-    // console.log("no error");
+    erroMsg[elem].innerHTML = "";
+    console.log(userName.value, userEmail.value, userSub.value, userFeed.value);
   }
 };

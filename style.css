@@ -27,6 +27,10 @@ a {
 li {
   padding: 0 10px;
 }
+.logo{
+  height: 80px;
+  width: 80px;
+}
 li:first-child {
   flex: 1;
 }

@@ -1,1 +1,1 @@
-# JS-project-Design
+# flex-slider
